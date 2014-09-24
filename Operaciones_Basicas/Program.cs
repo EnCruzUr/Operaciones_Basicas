@@ -5,7 +5,7 @@ namespace Operaciones_Basicas
     {
         public static void Menu(){
             int Opcion;
-            Console.WriteLine("Seleccione Operacion que desea realizar");
+            Console.WriteLine("\n\nSeleccione Operacion que desea realizar");
             Console.WriteLine("1)Suma");
             Console.WriteLine("2)Resta");
             Console.WriteLine("3)Multiplicacion");
@@ -26,8 +26,7 @@ namespace Operaciones_Basicas
                     Div();
                     break;
                 case 5:
-                    Console.Write("\n\nPresione una tecla para salir . . . ");
-			        Console.ReadKey(true);
+                    Environment.Exit(0);
                     break;
             }
 
@@ -41,8 +40,7 @@ namespace Operaciones_Basicas
             NumSum2 = int.Parse(Console.ReadLine());
             ResSum = NumSum1 + NumSum2;
             Console.Write("El Resultado de la Suma es: "+ResSum);
-            Console.Write("\n\nPresione una tecla para salir . . . ");
-            Console.ReadKey(true);
+            Menu2();
         }
         public static void Res()
         {
@@ -53,8 +51,7 @@ namespace Operaciones_Basicas
             NumRes2 = int.Parse(Console.ReadLine());
             ResRes = NumRes1 - NumRes2;
             Console.Write("El Resultado de la Resta es: " + ResRes);
-            Console.Write("\n\nPresione una tecla para salir . . . ");
-            Console.ReadKey(true);
+            Menu2();
         }
         public static void Mult()
         {
@@ -65,8 +62,7 @@ namespace Operaciones_Basicas
             NumMult2 = int.Parse(Console.ReadLine());
             ResMult = NumMult1 * NumMult2;
             Console.Write("El Resultado de la Multiplicacion es: " + ResMult);
-            Console.Write("\n\nPresione una tecla para salir . . . ");
-            Console.ReadKey(true);
+            Menu2();
         }
         public static void Div()
         {
@@ -78,10 +74,23 @@ namespace Operaciones_Basicas
             NumDiv2 = int.Parse(Console.ReadLine());
             ResDiv = NumDiv1 / NumDiv2;
             Console.Write("El Resultado de la Division es: " + ResDiv);
-            Console.Write("\n\nPresione una tecla para salir . . . ");
-            Console.ReadKey(true);
+            Menu2();
         }
-
+        public static void Menu2()
+        {
+            int Respuesta;
+            Console.Write("\n\n\n1)Regresar al Menu\n2)Salir\n");
+            Respuesta = int.Parse(Console.ReadLine());
+            switch (Respuesta)
+            {
+                case 1:
+                    Menu();
+                    break;
+                default:
+                    Environment.Exit(0);
+                    break;
+            }
+        }
         static void Main(string[] args)
         {
             Menu();
