@@ -58,11 +58,28 @@ namespace Operaciones_Basicas
         }
         public static void Mult()
         {
-
+            int NumMult1, NumMult2, ResMult;
+            Console.Write("\n\nIngresa Valor: ");
+            NumMult1 = int.Parse(Console.ReadLine());
+            Console.Write("Ingresa Valor a multiplicar: ");
+            NumMult2 = int.Parse(Console.ReadLine());
+            ResMult = NumMult1 * NumMult2;
+            Console.Write("El Resultado de la Multiplicacion es: " + ResMult);
+            Console.Write("\n\nPresione una tecla para salir . . . ");
+            Console.ReadKey(true);
         }
         public static void Div()
         {
-
+            int NumDiv1, NumDiv2;
+            double ResDiv;
+            Console.Write("\n\nIngresa Divisor: ");
+            NumDiv1 = int.Parse(Console.ReadLine());
+            Console.Write("Ingresa Dividendo: ");
+            NumDiv2 = int.Parse(Console.ReadLine());
+            ResDiv = NumDiv1 / NumDiv2;
+            Console.Write("El Resultado de la Division es: " + ResDiv);
+            Console.Write("\n\nPresione una tecla para salir . . . ");
+            Console.ReadKey(true);
         }
 
         static void Main(string[] args)
