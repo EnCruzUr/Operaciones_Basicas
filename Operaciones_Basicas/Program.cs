@@ -34,11 +34,27 @@ namespace Operaciones_Basicas
         }
         public static void Suma()
         {
-
+            int NumSum1, NumSum2, ResSum;
+            Console.Write("\n\nIngresa Primer Valor: ");
+            NumSum1=int.Parse(Console.ReadLine());
+            Console.Write("Ingresa Segundo Valor: ");
+            NumSum2 = int.Parse(Console.ReadLine());
+            ResSum = NumSum1 + NumSum2;
+            Console.Write("El Resultado de la Suma es: "+ResSum);
+            Console.Write("\n\nPresione una tecla para salir . . . ");
+            Console.ReadKey(true);
         }
         public static void Res()
         {
-
+            int NumRes1, NumRes2, ResRes;
+            Console.Write("\n\nIngresa Primer Valor: ");
+            NumRes1 = int.Parse(Console.ReadLine());
+            Console.Write("Ingresa Segundo Valor: ");
+            NumRes2 = int.Parse(Console.ReadLine());
+            ResRes = NumRes1 - NumRes2;
+            Console.Write("El Resultado de la Resta es: " + ResRes);
+            Console.Write("\n\nPresione una tecla para salir . . . ");
+            Console.ReadKey(true);
         }
         public static void Mult()
         {
